@@ -1,0 +1,123 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%; /* Reseta o tamanho da fonte padrão do navegador */
+}
+
+body {
+  line-height: 1.6;
+  font-family: 'FIFA', sans-serif; /* Define a fonte padrão para o corpo do documento */
+  color: white; /* Define a cor do texto padrão para branco */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/fundo.webp') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Adiciona a fonte FIFA */
+@font-face {
+  font-family: 'FIFA';
+  src: url('fonts/FIFA.ttf') format('truetype'); /* Atualize este caminho conforme necessário */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.btn-fifa {
+  background-color: #007BFF; /* Azul padrão do Bootstrap */
+  color: white;
+  font-size: 20px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 2em; /* Espaço acima do botão */
+}
+
+.playoff-box {
+  background-color: rgba(0, 0, 0, 0.7); /* Caixa preta semi-transparente */
+  padding: 2em;
+  margin-top: 2em; /* Espaço acima da caixa preta */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilos para o cabeçalho */
+header {
+  margin-bottom: 2em; /* Espaço abaixo do cabeçalho */
+}
+
+h1 {
+  font-size: 2.5rem; /* Tamanho do título */
+  margin-bottom: 0.5em; /* Espaço abaixo do título */
+}
+
+p {
+  font-size: 1.2rem; /* Tamanho do subtítulo */
+  opacity: 0.8; /* Opacidade do subtítulo */
+}
+
+/* CSS anterior... */
+
+.playoff-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2em;
+  margin-top: 2em;
+  border-radius: 10px;
+  color: white;
+}
+
+.form-control, .form-check-input {
+  margin-bottom: 1em;
+}
+
+.table-dark {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.d-none {
+  display: none;
+}
+
+/* Estilos adicionais */
+.table {
+  color: white;
+}
+.table-dark {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+/* Ajuste para inputs e labels para melhor visualização */
+.form-group label,
+.form-group input {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+/* ... seu CSS anterior ... */
+
+/* Corrigindo a cor do texto da tabela para branco */
+.table-dark th, .table-dark td, .table-dark thead th {
+  color: white;
+}
+
+/* Estilização para a tabela de confrontos */
+.tournament-matchup {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid white;
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+/* Estilização para o formulário de detalhes */
+#detailsForm > div {
+  margin-bottom: 1em;
+}
+
