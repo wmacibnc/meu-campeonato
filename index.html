@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Campeonato</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="text-center mt-5">
+    <h1>Meu Campeonato</h1>
+    <p>Alcance divisões mais altas para competir por melhores recompensas nos playoffs</p>
+  </header>
+
+  <div class="playoff-box container mt-5">
+    <form id="initialForm" class="text-center">
+      <h2>Iniciar Campeonato</h2>
+      <div>
+        <input type="radio" id="knockout" name="competitionFormat" value="mata-mata" required>
+        <label for="knockout">Mata-mata</label>
+        <input type="radio" id="league" name="competitionFormat" value="pontos-corridos" required>
+        <label for="league">Pontos corridos</label>
+      </div>
+      <div>
+        <label for="playerCount">Quantidade de jogadores:</label>
+        <input type="number" id="playerCount" name="playerCount" min="2" required>
+      </div>
+      <button type="submit" class="btn btn-fifa">Iniciar</button>
+    </form>
+
+    <form id="detailsForm" class="text-center d-none">
+      <!-- O conteúdo aqui será gerado dinamicamente pelo JavaScript -->
+    </form>
+
+    <div id="tournamentStructure" class="d-none">
+      <!-- A estrutura do torneio aqui será gerada dinamicamente pelo JavaScript -->
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
