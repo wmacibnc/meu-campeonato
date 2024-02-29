@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogar Campeonato</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="text-center mt-5">
+    <h1>Jogar Campeonato</h1>
+    <p>Acompanhe o progresso do campeonato e veja quem chega ao topo!</p>
+  </header>
+
+  <div class="container mt-5">
+    <div id="championshipProgress" class="text-center">
+        <h2>Confrontos Mata-Mata</h2>
+        <table id="matchupsTable" class="table table-bordered">
+            <!-- Confrontos serão inseridos aqui -->
+        </table>
+        <button id="nextRoundButton" class="btn btn-primary d-none">Próxima Rodada</button>
+    </div>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/jogar.js" defer></script> <!-- Este será seu novo arquivo de script para lidar com a lógica do campeonato -->
+</body>
+</html>

@@ -41,13 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
       const tournamentStructure = document.getElementById('tournamentStructure');
       tournamentStructure.innerHTML = '';
       tournamentStructure.classList.remove('d-none');
-  
+      let confrontos = {};
       if (format === 'mata-mata') {
         // Embaralha a lista de jogadores
         players.sort(() => Math.random() - 0.5);
   
         // Gera confrontos
-        let matchups = '';
+        let matchups = '<h2>Campeonato mata mata</h2><br /><tr><th>Mandante</th><th>-</th><th>Visitante</th></tr>';
         for (let i = 0; i < players.length; i += 2) {
           matchups += `
             <tr>
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         players.sort((a, b) => a.name.localeCompare(b.name));
   
         // Gera tabela de pontos corridos
-        let leagueTable = '<tr><th>#</th><th>Nome</th><th>Time</th><th>Pontos</th></tr>';
+        let leagueTable = '<h2>Campeonato por pontos corridos</h2><br /><tr><th>&#35;</th><th>Nome</th><th>Time</th><th>Pontos</th></tr>';
         players.forEach(player => {
           leagueTable += `
             <tr>
@@ -76,6 +76,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         tournamentStructure.innerHTML = `<table class="table table-dark">${leagueTable}</table>`;
       }
+       // Gerando o JSON com os dados do torneio
+    const tournamentData = {
+      formaDisputa: format,
+      jogadores: players
+    };
+
+  // Adicionando o botão "Iniciar Campeonato"
+  const startButton = document.createElement('button');
+  startButton.innerText = 'Iniciar Campeonato';
+  startButton.className = 'btn btn-fifa';
+  startButton.addEventListener('click', () => {
+      // fetch('/teste.html', { // Substitua 'sua_api_ou_url_para_simular' pela URL da sua API
+      //     method: 'POST',
+      //     headers: {
+      //         'Content-Type': 'application/json',
+      //     },
+      //     body: JSON.stringify(tournamentData)
+      // }).then(response => {
+      //     // Simulação de envio, já que não temos uma URL real
+      //     // Redirecionamento para jogar.html com os dados enviados via método GET, localStorage ou SessionStorage
+      //     localStorage.setItem('tournamentData', JSON.stringify(tournamentData));
+      //     window.location.href = 'jogar.html';
+      // }).catch(error => console.error('Error:', error));
+      // Redirecionamento para jogar.html com os dados enviados via método GET, localStorage ou SessionStorage
+           localStorage.setItem('tournamentData', JSON.stringify(tournamentData));
+           window.location.href = 'jogar.html';
+
+  });
+
+  document.getElementById('tournamentStructure').appendChild(startButton);
     });
   });
 });
